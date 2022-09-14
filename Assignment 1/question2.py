@@ -16,32 +16,32 @@ I2 = G.in_degree(2)
 I6 = G.in_degree(6)
 O2 = G.out_degree(2)
 O6 = G.out_degree(6)
-print("in-degrees and out-degrees of node 2 and 6 are ", I2, ", ", I6,", ", O2,", ", O6, " respectively",  "\n")
+print("\n  #1. in-degrees and out-degrees of node 2 and 6 are ", I2, ", ", I6,", ", O2,", ", O6, " respectively",  "\n")
 # 2. What is the shortest path from node 4 to 3?
 S = nx.shortest_path(G, 4, 3)
-print("the shortest path from node 4 to 3 is ", S,  "\n")
+print("\n  #2. the shortest path from node 4 to 3 is ", S,  "\n")
 # 3. Is the graph a strongly connected graph?
 SC = nx.is_strongly_connected(G)
-print("is this graph strongly connected? :", SC,  "\n")
+print("\n  #3. is this graph strongly connected? :", SC,  "\n")
 # 4. What is the largest subgraph that is strongly connected?
 largest = max(nx.strongly_connected_components(G), key=len)
-print("largest connected subgraph is", largest,  "\n")
+print("\n #4. largest connected subgraph is", largest,  "\n")
 # 5. Is the graph a directed acyclic graph?
 DAG = nx.is_directed_acyclic_graph(G)
-print("Is the graph a directed acyclic graph?: ", DAG,  "\n")
+print("\n  #5. Is the graph a directed acyclic graph?: ", DAG,  "\n")
 # 6. What is the diameter of this graph?
 # Dm = nx.diameter(G)
-print("diameter of this graph is - ","since this is  not strongly connected directed network and diameter is infinite because we have nodes which has no path to other nodes ie. infinite diameter" ,  "\n")
+print("\n #6. diameter of this graph is - ","since this is  not strongly connected directed network and diameter is infinite because we have nodes which has no path to other nodes ie. infinite diameter" ,  "\n")
 # 7. What is the edge list representation of 𝐺𝐺(𝐸𝐸, 𝑉𝑉)?
-print( "\n", "edge list of network is ", list(G.edges()))
+print( "\n #7. edge list of network is ", list(G.edges()))
 # 8. What is the adjacency list of 𝐺𝐺(𝐸𝐸, 𝑉𝑉)?
-print( "\n", "adjacency list of network is ", G.adj,  "\n")
+print( "\n #8. adjacency list of network is ", G.adj,  "\n")
 # 9. What is the adjacency matrix 𝐴 of 𝐺𝐺(𝐸𝐸, 𝑉𝑉)?
 A = nx.to_numpy_matrix(G)  
-print("\n", "the adjacency matrix of graph is","\n", A,  "\n")
+print("\n #9. the adjacency matrix of graph is","\n", A,  "\n")
 
 # 11. What is the relationship between matrices 𝐴 , 𝐵 , and 𝐸 ?
-print("\n", "product of out edge incidence matrix and transpose of in-edge incidence matrix gives Adjacent Matrix",  "\n")
+print("\n #11. product of out edge incidence matrix and transpose of in-edge incidence matrix gives Adjacent Matrix",  "\n")
 
 # 12. Please draw the line graph of 𝐺𝐺(𝐸𝐸, 𝑉𝑉).
 plt.figure(1)
@@ -52,8 +52,8 @@ plt.show()
 
 # 13. What is the adjacency matrix 𝑀 of the line graph of 𝐺(𝐸, 𝑉)?
 AL = nx.to_numpy_matrix(H)
-print("\n", "the adjacency matrix of line graph is","\n", AL,  "\n")
+print("\n #13. the adjacency matrix of line graph is","\n", AL,  "\n")
 
 
 # 14. What is the relationship the matrices M , 𝐵 , and 𝐸?
-print("product of transpose of in-edge incidence Matrix(E) and out-edge incidence matrix(E) is equal to M")
+print(" \n #14. product of transpose of in-edge incidence Matrix(E) and out-edge incidence matrix(E) is equal to M")
